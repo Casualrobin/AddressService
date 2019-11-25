@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}addressservice
     build:
       context: .
-      dockerfile: AddressService\Dockerfile
+      dockerfile: AddressService/Dockerfile
