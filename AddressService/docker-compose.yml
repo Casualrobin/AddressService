@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  addressservice:
+    image: ${DOCKER_REGISTRY-}addressservice
+    build:
+      context: .
+      dockerfile: AddressService\Dockerfile
