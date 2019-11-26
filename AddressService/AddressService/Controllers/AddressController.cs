@@ -1,5 +1,6 @@
 ﻿using AddressService.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
 
@@ -27,15 +28,16 @@ namespace AddressService.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Address address)
+        public IActionResult PostMultipleAddresses([FromBody] IEnumerable<Address> addresses)
         {
-            address.AggregateCity = AddressUtils.GetAggregateCity(address, _addressRepository.GetAggregateAddresses());
-
             using (var scope = new TransactionScope())
             {
-                _addressRepository.InsertAddress(address);
-                scope.Complete();
-                return CreatedAtAction(nameof(Get), new { id = address.ID }, address);
+                foreach (var address in addresses)
+                {
+                    address.AggregateCity = AddressUtils.GetAggregateCity(address, _addressRepository.GetAggregateAddresses());
+                    _addressRepository.InsertAddress(address);  
+                }
+                return CreatedAtAction(nameof(Get), new { id = addresses.Select(a => a.ID) });
             }
         }
 

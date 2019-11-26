@@ -8309,11 +8309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brian\\Desktop\\RobinCode\\Address\\AddressServiceTests\\AddressServiceTests.csproj",
+      "projectUniqueName": "C:\\Users\\brian\\Desktop\\RobinCode\\addressTest\\AddressServiceTests\\AddressServiceTests.csproj",
       "projectName": "AddressServiceTests",
-      "projectPath": "C:\\Users\\brian\\Desktop\\RobinCode\\Address\\AddressServiceTests\\AddressServiceTests.csproj",
+      "projectPath": "C:\\Users\\brian\\Desktop\\RobinCode\\addressTest\\AddressServiceTests\\AddressServiceTests.csproj",
       "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brian\\Desktop\\RobinCode\\Address\\AddressServiceTests\\obj\\",
+      "outputPath": "C:\\Users\\brian\\Desktop\\RobinCode\\addressTest\\AddressServiceTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8329,8 +8329,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\brian\\Desktop\\RobinCode\\Address\\AddressService\\AddressService\\AddressService.csproj": {
-              "projectPath": "C:\\Users\\brian\\Desktop\\RobinCode\\Address\\AddressService\\AddressService\\AddressService.csproj"
+            "C:\\Users\\brian\\Desktop\\RobinCode\\addressTest\\AddressService\\AddressService\\AddressService.csproj": {
+              "projectPath": "C:\\Users\\brian\\Desktop\\RobinCode\\addressTest\\AddressService\\AddressService\\AddressService.csproj"
             }
           }
         }

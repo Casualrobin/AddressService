@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressService", "AddressSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressServiceTests", "..\AddressServiceTests\AddressServiceTests.csproj", "{868D06D1-43D0-40C7-95B4-B60A3A6CE208}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{409FC187-1AB1-4290-BBED-451E7B9054E7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{868D06D1-43D0-40C7-95B4-B60A3A6CE208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{868D06D1-43D0-40C7-95B4-B60A3A6CE208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{868D06D1-43D0-40C7-95B4-B60A3A6CE208}.Release|Any CPU.Build.0 = Release|Any CPU
-		{409FC187-1AB1-4290-BBED-451E7B9054E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{409FC187-1AB1-4290-BBED-451E7B9054E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{409FC187-1AB1-4290-BBED-451E7B9054E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{409FC187-1AB1-4290-BBED-451E7B9054E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
