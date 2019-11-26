@@ -37,6 +37,8 @@ namespace AddressService.Controllers
                     address.AggregateCity = AddressUtils.GetAggregateCity(address, _addressRepository.GetAggregateAddresses());
                     _addressRepository.InsertAddress(address);  
                 }
+                scope.Complete();
+
                 return CreatedAtAction(nameof(Get), new { id = addresses.Select(a => a.ID) });
             }
         }

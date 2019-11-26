@@ -3,6 +3,7 @@ using AddressService.Controllers;
 using AddressServiceTests.RepositoryTests;
 using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace AddressServiceTests
 {
@@ -57,9 +58,9 @@ namespace AddressServiceTests
 
             var okObjectResult = controller.Get() as OkObjectResult;
 
-            var model = okObjectResult.Value as Address[][];
+            var model = (object[][]) okObjectResult.Value;
 
-            Assert.NotNull(model);
+            Assert.NotNull(okObjectResult.Value);
 
             var actual = model.Length;
 
@@ -69,10 +70,8 @@ namespace AddressServiceTests
         [Test]
         public void PostNewResultsAreRegistered()
         {
-            controller.Post(a);
-            controller.Post(b);
-            controller.Post(c);
-
+            List<Address> l = new List<Address>() { a,b,c };
+            controller.PostMultipleAddresses(l);
             Assert.AreEqual(3, testRepo.data.Count);
         }
 
